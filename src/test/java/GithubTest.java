@@ -16,7 +16,7 @@ public class GithubTest {
     }
 
     @Test
-    void checkJUnitExampleCodeExist() {
+    void checkJUnitExampleCodeExistTest() {
         open(baseUrl + "/selenide/selenide");
         $("nav.js-repo-nav").find(byText("Wiki")).click();
         $(withTagAndText("a", "Soft assertions")).click();
