@@ -21,11 +21,7 @@ public class GithubTest {
     void checkJUnitExampleCodeExist() {
         open(baseUrl + "/selenide/selenide");
         $("nav.js-repo-nav").find(byText("Wiki")).click();
-        $(byTagAndText("h2", "Chapters"))
-                .parent()
-                .sibling(0)
-                .find(byText("Soft assertions"))
-                .click();
+        $(withTagAndText("a", "Soft assertions")).click();
 
         $(withTagAndText("h4", "JUnit5 extend test class"))
                 .parent()
